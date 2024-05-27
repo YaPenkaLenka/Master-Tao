@@ -1,7 +1,14 @@
 footer{
-    height: 100px;
-    background: $secondary-color;
-    margin-top: auto;
+	height: 423px;
+	max-height: 100dvh;
+	max-width: 100%;
+	background: $bg-color;
+	h2 {
+		text-align: center;
+		color: $main-text-color;
+		padding-top: 150px;
+	}
+    
 }
 
  

@@ -1,8 +1,28 @@
-///fonts///
-$font-primary: "Open Sans";
-$font-secondary:  "monospace";
-$font-size: 16px;
+///colors-text///
+$main-text-color: #FFFFFF;
+$secondary-text-color: #85899C;
 
-///colors///
-$primary-color: #222;
-$secondary-color: #f00;
+///color-bg///
+$bg-color:#282B38;
+$bg-color-secondary:#363A4D;
+
+///colors-other///
+$color-btn: #E58D35;
+$color-item: #89C249;
+
+.bg-color {
+    background-color: $bg-color;
+    border: 1px solid;
+}
+
+.bg-color-second {
+    background-color: $bg-color-secondary
+}
+
+.color-btn {
+    background-color: $color-btn;
+}
+
+.color-item {
+    background-color: $color-item;
+}

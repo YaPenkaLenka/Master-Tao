@@ -1,0 +1,284 @@
+.container-markup {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+   
+    .col-md-4 {
+        height: 450px;
+    }
+
+    ::selection {
+        background: $color-item;
+        color: $main-text-color;
+    }
+    
+       .example {
+           display: inline-flex;
+           width: 300px;
+           height: 70px;
+           border-radius: 10px;
+           margin-bottom: 5px;
+       }
+
+        a {
+            color: $color-btn;
+        }
+        
+        .row::selection{
+            background-color: $color-item;
+        }
+        h4 {
+            margin-bottom: 12px;
+        }
+                                 // numbered-list (ol)
+
+            .num-item::marker{
+                color: $color-item;
+                margin-right: 12px;
+                font-size: 18px;
+             }
+             .num-item {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 4px;
+             }
+
+                                 // bulleted-list (ul)
+
+            .bull-item {
+                list-style-type: none;
+                margin-bottom: 4px;
+             } 
+
+            .bull-item::before {
+               content: "";
+               background-color: $color-item;
+               margin-right: 12px;
+               width: 8px;
+               height: 8px;
+               border-radius: 50%;
+               display: inline-block;
+               margin-left: -8px;
+            }
+
+        
+        
+        
+                                 //   CHECKBOX
+
+        .example-checkbox {
+            margin-bottom: 20px;
+        }
+
+          [type=checkbox] {
+              display: none;
+           }
+            
+           label {
+            margin-bottom: 6px;
+           }
+           
+           [type=checkbox] + label:before {
+              content: "";
+              display: inline-block;
+              background-color: $main-text-color;
+              border: 1px solid ;
+              border-radius: 4px;
+              width: 24px;
+              height: 24px;
+              margin-right: 9px;
+           }
+
+             input:checked  + label::before {
+                content: "";
+                background: url(../assets/img/check-mark.svg) center no-repeat $main-text-color;
+             }
+              
+             [type=checkbox] + label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+              }
+             
+
+
+                                                //    RADIO
+                  
+
+            [type=radio] {
+                display: none;
+            }  
+
+            [type=radio]  + label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }  
+    
+            [type=radio]  + label:before {
+                content: "";
+                display: inline-block;
+                background-color: $main-text-color;
+                border: 1px solid ;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                margin-right: 9px;
+                top: 2px;
+                margin-right: 9px;
+            }
+
+            [type=radio]:checked + label:before {
+                content: "•";
+                background: #fff;
+                font-size: 40px;
+                line-height: 18px;
+                color: #282B38;
+                text-align: center;
+            }
+                    
+
+
+                                            // BUTTON 
+                .btn-tao {
+                    display: inline-block;
+                }
+                
+                .btn {
+                    border-radius: 90px;
+                    cursor: pointer;
+                    color: $main-text-color;
+                    font-weight: 600;
+                    line-height: 146%;
+                    letter-spacing: 0.6px;
+                }
+
+
+                .btn:hover {
+                    background-color: $color-item ;
+                }
+
+                .example-btn-first {
+                    display: flex;
+                    width: 500px;
+                    gap: 5px;
+                    margin-bottom: 2px;
+                }
+
+                .example-btn_second {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                }
+
+                .btn-first,
+                .btn-other {
+                    width: 153px;
+                    height: 50px;
+                    font-size: 15px;
+                    text-align: center;
+                }
+                    
+                .btn-second {
+                    width: 171px;
+                    height: 50px;
+                    font-size: 15px;
+                    text-align: center;
+                }
+
+                .btn-send_request,
+                .btn-price,
+                .btn-nextstep,
+                .btn-reg-cargo {
+                    font-size: 16px;
+                    white-space: nowrap;
+                    position: relative;
+                }
+                    
+                .btn-price,
+                .btn-nextstep,
+                .btn-reg-cargo {
+                    padding: 23px 94px 22px 33px;
+                }
+
+                .btn-send_request {
+                    width: 310px;
+                    height: 68px;
+                    padding: 23px 141px 22px 33px;
+                }
+
+                .btn-price {
+                    width: 293px;
+                    height: 68px;
+                }
+
+                .btn-nextstep {
+                    width: 253px;
+                    height: 68px;
+                }
+
+                .btn-reg-cargo {
+                    width: 243px;
+                    height: 68px;
+                }
+                
+                .btn-other {
+                    background-color: transparent;
+                    border-color: $color-btn;
+                    font-size: 16px;
+                }
+                    
+                .btn-send_request::after,
+                .btn-price::after,
+                .btn-nextstep::after,
+                .btn-reg-cargo::after {
+                    content: '';
+                    position: absolute;
+                    background: url(../assets/img/btn-icon.svg);
+                    background-size: contain;
+                    width: 27px;
+                    height: 27px;
+                    top: 21.42px;
+                    bottom: 20.42px;
+                    right: 21.42px;
+                }
+            
+                                    // SCROLL
+
+                .scroll {
+                     overflow: auto;
+                     height: 300px;
+                     padding-right: 15px;
+                     scrollbar-color: $color-btn #fff;
+                }
+
+                                 SLICK_SLIDER
+
+                                 
+                   .slick-slider {
+                     margin: auto;
+                     padding: 30px;
+                     width: 100%;
+                     max-width: 600px;
+                     box-sizing: border-box;
+                     background-color: $bg-color;
+
+            
+
+                    h3 {
+                        background-color: $bg-color-secondary;
+                        border: 1px solid $main-text-color;
+                        font-size: 36px;
+                        line-height: 100px;
+                        margin: 10px;
+                        padding: 2%;
+                        position: relative;
+                        text-align: center;
+                      }
+                  }
+                
+              
+            
+                  
+        

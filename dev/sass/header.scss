@@ -1,5 +1,11 @@
 header {
-	height: 7vh;
-	padding: 15px 0;
-	background: #f48b8bd2;
+	height: 114px;
+	max-height: 100dvh;
+	max-width: 100%;
+	background: $bg-color;
+	h2 {
+		text-align: center;
+		color: $main-text-color;
+		padding-top: 32px;
+	}
 }
