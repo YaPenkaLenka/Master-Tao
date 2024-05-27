@@ -1,6 +1,11 @@
-
+ // main
 .wrapper {
     background-color: $bg-color;
+    color: $main-text-color;
+}
+
+::selection {
+    background: $color-item;
     color: $main-text-color;
 }
 
@@ -8,23 +13,275 @@
     width: 100%;
 }
 
-h1 {
-    font-size: 56px;
+.markup.container  {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h2 {
-    font-size: 36px;
-}
-h3 {
-    font-size: 24px;
-}
-h4 {
-    font-size: 22px;
-}
-h5 {
-    font-size: 21px;
-}
-h6 {
-    font-size: 20px;
+.row::selection{
+    background-color: $color-item;
 }
 
+
+    // Fonts, a
+
+ .fw-light {
+     font-family: 'Proxima Nova Lt';
+     font-weight: 300;
+ }
+ 
+ .fw-regular {
+ font-family: 'Proxima Nova Rg';
+ font-weight: 400;
+ }
+
+ .fw-semibold {
+ font-family: 'Proxima Nova Lt';
+ font-weight: 600;
+ }
+ 
+ .fw-bold {
+     font-family: 'Proxima Nova Rg';
+     font-weight: 700;
+ }
+ 
+ h1 {
+     font-size: 56px;
+ }
+ 
+ h2 {
+     font-size: 36px;
+ }
+ h3 {
+     font-size: 24px;
+ }
+ h4 {
+     font-size: 22px;
+ }
+ h5 {
+     font-size: 21px;
+ }
+ h6 {
+     font-size: 20px;
+ }
+ 
+ a {
+     color: $color-btn;
+ }
+
+    // Pattern
+
+// ul (ol) / (ul)
+
+.num-item::marker{
+    color: $color-item;
+    margin-right: 12px;
+    font-size: 18px;
+ }
+ .num-item {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+ }
+
+
+ .bull-item {
+    list-style-type: none;
+    margin-bottom: 4px;
+ } 
+.bull-item::before {
+   content: "";
+   background-color: $color-item;
+   margin-right: 12px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   display: inline-block;
+   margin-left: -8px;
+}
+
+// checkbox
+
+[type=checkbox] {
+    display: none;
+ }
+  
+ label {
+  margin-bottom: 6px;
+ }
+ 
+ [type=checkbox] + label:before {
+    content: "";
+    display: inline-block;
+    background-color: $main-text-color;
+    border: 1px solid ;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+ }
+
+   input:checked  + label::before {
+      content: "";
+      background: url(../assets/img/check-mark.svg) center no-repeat $main-text-color;
+   }
+    
+   [type=checkbox] + label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    // radio
+
+    [type=radio] {
+        display: none;
+    }  
+
+    [type=radio]  + label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }  
+
+    [type=radio]  + label:before {
+        content: "";
+        display: inline-block;
+        background-color: $main-text-color;
+        border: 1px solid ;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin-right: 9px;
+        top: 2px;
+        margin-right: 9px;
+    }
+
+    [type=radio]:checked + label:before {
+        content: "•";
+        background: #fff;
+        font-size: 40px;
+        line-height: 18px;
+        color: #282B38;
+        text-align: center;
+    }
+
+    // Button
+
+    .btn {
+        border-radius: 90px;
+        cursor: pointer;
+        color: $main-text-color;
+        font-weight: 600;
+        line-height: 146%;
+        letter-spacing: 0.6px;
+        border-color: $color-btn;
+        white-space: nowrap;
+     }
+     
+     .btn:hover {
+        background-color: $color-item ;
+    }
+
+    .btn-first,
+    .btn-other {
+        width: 153px;
+        height: 50px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .btn-first {
+        padding: 14px 17.84px 14px 18.16px;
+    }
+    .btn-other {
+        padding: 14px 24.16px;
+    }
+        
+    .btn-second {
+        width: 171px;
+        height: 50px;
+        font-size: 15px;
+        text-align: center;
+        padding: 14px 27px;
+    }
+
+    
+    .btn-send_request {
+        width: 310px;
+        height: 68px;
+        font-size: 16px;
+        padding: 23px 141px 22px 33px;
+    }
+
+    .btn-send_request::after {
+        right: 19.42px;
+    }
+
+    .btn-price {
+        width: 293px;
+        height: 68px;
+    }
+
+    .btn-send_request,
+    .btn-price,
+    .btn-nextstep,
+    .btn-reg-cargo {
+        font-size: 16px;
+        white-space: nowrap;
+        position: relative;
+    }
+        
+    .btn-price,
+    .btn-nextstep {
+        padding: 23px 97px 22px 33px;
+    }
+
+    .btn-reg-cargo {
+        padding: 23px 94px 22px 33px;
+    }
+
+    .btn-nextstep {
+        width: 253px;
+        height: 68px;
+    }
+
+    .btn-reg-cargo {
+        width: 243px;
+        height: 68px;
+    }
+    
+    .btn-other {
+        background-color: transparent;
+        border-color: $color-btn;
+    }
+        
+    .btn-send_request::after,
+    .btn-price::after,
+    .btn-nextstep::after,
+    .btn-reg-cargo::after {
+        content: '';
+        position: absolute;
+        background: url(../assets/img/btn-icon.svg);
+        background-size: contain;
+        width: 27px;
+        height: 27px;
+        top: 21.42px;
+        bottom: 20.42px;
+    }
+
+    .btn-price::after,
+    .btn-nextstep::after,
+    .btn-reg-cargo::after {
+        right: 21.42px;
+    }
+
+    // scroll
+
+    .scroll {
+        overflow: auto;
+        height: 300px;
+        padding-right: 15px;
+        scrollbar-color: $color-btn #fff;
+   }
